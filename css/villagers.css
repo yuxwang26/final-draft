@@ -46,7 +46,7 @@ h2{
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1000px) {
     .villager-gallery-item{
         max-width: 1000px;
         margin: 0 auto;

@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+  }
+
 body{
 	margin:1%;
 	padding:1%;
@@ -35,15 +39,11 @@ a, a:visited {
     color: white;
 }
 
-.nav_item a{
+.nav_links a{
     line-height: 1.8;
 }
 
-.nav_item a:hover{
-    text-decoration: underline;
-}
-
-.nav_item a:active, .nav_item a:focus{
+nav > ul > li.active a {
     text-decoration: underline;
 }
 
@@ -68,5 +68,31 @@ a, a:visited {
 @media (prefers-reduced-motion: reduce) {
     #logo {
         animation: none;
+    }
+}
+
+a.skip{
+    color: white;
+    left: 40px;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top .5s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+@media screen and (min-width: 800px) {
+    .nav_links{
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .nav_links{
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
